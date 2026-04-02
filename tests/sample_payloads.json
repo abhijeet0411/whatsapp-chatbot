@@ -1,0 +1,137 @@
+{
+  "comment": "Sample WhatsApp Cloud API webhook payloads for testing",
+
+  "text_hi": {
+    "object": "whatsapp_business_account",
+    "entry": [{
+      "id": "ENTRY_ID",
+      "changes": [{
+        "value": {
+          "messaging_product": "whatsapp",
+          "metadata": { "display_phone_number": "9175675232", "phone_number_id": "PHONE_ID" },
+          "contacts": [{ "profile": { "name": "Abhijeet S" }, "wa_id": "919876543210" }],
+          "messages": [{
+            "from": "919876543210",
+            "id": "wamid.SAMPLE001",
+            "timestamp": "1711987200",
+            "text": { "body": "hi" },
+            "type": "text"
+          }]
+        },
+        "field": "messages"
+      }]
+    }]
+  },
+
+  "button_lang_marathi": {
+    "object": "whatsapp_business_account",
+    "entry": [{
+      "id": "ENTRY_ID",
+      "changes": [{
+        "value": {
+          "contacts": [{ "profile": { "name": "Abhijeet S" }, "wa_id": "919876543210" }],
+          "messages": [{
+            "from": "919876543210",
+            "id": "wamid.SAMPLE002",
+            "timestamp": "1711987210",
+            "type": "interactive",
+            "interactive": {
+              "type": "button_reply",
+              "button_reply": { "id": "lang_mr", "title": "मराठी" }
+            }
+          }]
+        },
+        "field": "messages"
+      }]
+    }]
+  },
+
+  "list_reply_menu_7": {
+    "object": "whatsapp_business_account",
+    "entry": [{
+      "id": "ENTRY_ID",
+      "changes": [{
+        "value": {
+          "contacts": [{ "profile": { "name": "Abhijeet S" }, "wa_id": "919876543210" }],
+          "messages": [{
+            "from": "919876543210",
+            "id": "wamid.SAMPLE003",
+            "timestamp": "1711987220",
+            "type": "interactive",
+            "interactive": {
+              "type": "list_reply",
+              "list_reply": { "id": "menu_7", "title": "शासनस्तरावरील योजना" }
+            }
+          }]
+        },
+        "field": "messages"
+      }]
+    }]
+  },
+
+  "list_reply_scheme_sba": {
+    "object": "whatsapp_business_account",
+    "entry": [{
+      "id": "ENTRY_ID",
+      "changes": [{
+        "value": {
+          "contacts": [{ "profile": { "name": "Abhijeet S" }, "wa_id": "919876543210" }],
+          "messages": [{
+            "from": "919876543210",
+            "id": "wamid.SAMPLE004",
+            "timestamp": "1711987230",
+            "type": "interactive",
+            "interactive": {
+              "type": "list_reply",
+              "list_reply": { "id": "scheme_sba", "title": "स्वच्छ भारत अभियान" }
+            }
+          }]
+        },
+        "field": "messages"
+      }]
+    }]
+  },
+
+  "list_reply_ward_1": {
+    "object": "whatsapp_business_account",
+    "entry": [{
+      "id": "ENTRY_ID",
+      "changes": [{
+        "value": {
+          "contacts": [{ "profile": { "name": "Abhijeet S" }, "wa_id": "919876543210" }],
+          "messages": [{
+            "from": "919876543210",
+            "id": "wamid.SAMPLE005",
+            "timestamp": "1711987240",
+            "type": "interactive",
+            "interactive": {
+              "type": "list_reply",
+              "list_reply": { "id": "ward_1", "title": "प्रभाग समिती क्रमांक 1" }
+            }
+          }]
+        },
+        "field": "messages"
+      }]
+    }]
+  },
+
+  "free_text_complaint": {
+    "object": "whatsapp_business_account",
+    "entry": [{
+      "id": "ENTRY_ID",
+      "changes": [{
+        "value": {
+          "contacts": [{ "profile": { "name": "Abhijeet S" }, "wa_id": "919876543210" }],
+          "messages": [{
+            "from": "919876543210",
+            "id": "wamid.SAMPLE006",
+            "timestamp": "1711987250",
+            "type": "text",
+            "text": { "body": "रस्त्यावर धोकादायक होर्डिंग आहे" }
+          }]
+        },
+        "field": "messages"
+      }]
+    }]
+  }
+}

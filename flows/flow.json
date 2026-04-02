@@ -1,0 +1,393 @@
+{
+  "meta": {
+    "version": "1.0",
+    "municipality": "Ahilyanagar Mahanagar Palika",
+    "phone": "9175675232",
+    "languages": ["en", "mr"]
+  },
+
+  "nodes": {
+
+    "START": {
+      "id": "START",
+      "type": "interactive_buttons",
+      "messages": {
+        "mr": "🙏 नमस्कार *{name}*\nWelcome to Ahilyanagar Mahanagar Palika Official Chatbot.\nपुढे जाण्यासाठी भाषा निवडा / Please select language:",
+        "en": "🙏 Hello *{name}*\nWelcome to Ahilyanagar Mahanagar Palika Official Chatbot.\nPlease select your preferred language:"
+      },
+      "options": [
+        { "id": "lang_en", "title": "English", "next": "MAIN_MENU" },
+        { "id": "lang_mr", "title": "मराठी",   "next": "MAIN_MENU" }
+      ]
+    },
+
+    "MAIN_MENU": {
+      "id": "MAIN_MENU",
+      "type": "interactive_list",
+      "messages": {
+        "mr": "🏛 अहिल्यानगर महानगरपालिकेच्या व्हर्च्युअल असिस्टंटमध्ये आपले स्वागत आहे.\n\n🌐 कृपया खालीलपैकी एक पर्याय निवडा:",
+        "en": "🏛 Welcome to Ahilyanagar Mahanagar Palika Virtual Assistant.\n\n🌐 Please select an option:"
+      },
+      "list_header": { "mr": "मुख्य मेनू", "en": "Main Menu" },
+      "list_button": { "mr": "पर्याय निवडा", "en": "Select Option" },
+      "options": [
+        { "id": "menu_1", "title": { "mr": "निवडणूक विभाग",       "en": "Election Department" },     "description": { "mr": "मतदार याद्या, बूथ माहिती", "en": "Voter lists, booth info" },         "next": "ELECTION" },
+        { "id": "menu_2", "title": { "mr": "तक्रार निवारण",        "en": "Complaint Resolution" },    "description": { "mr": "तक्रार नोंदवा",             "en": "Register a complaint" },            "next": "COMPLAINT_CHANNEL" },
+        { "id": "menu_3", "title": { "mr": "नागरी सेवा व सुविधा", "en": "Civic Services" },           "description": { "mr": "नागरी सुविधा माहिती",       "en": "Civic facility info" },             "next": "CIVIC_SERVICES" },
+        { "id": "menu_4", "title": { "mr": "विभागांची माहिती",     "en": "Department Info (RTI)" },   "description": { "mr": "RTI Act 2005",               "en": "RTI Act 2005" },                    "next": "DEPT_INFO" },
+        { "id": "menu_5", "title": { "mr": "आपत्कालीन सेवा",      "en": "Emergency Services" },       "description": { "mr": "आपत्कालीन नंबर",            "en": "Emergency numbers" },               "next": "EMERGENCY" },
+        { "id": "menu_6", "title": { "mr": "सामाजिक प्रसिध्दी",   "en": "Social Media" },             "description": { "mr": "सोशल मीडिया लिंक्स",        "en": "Official social links" },           "next": "SOCIAL_MEDIA" },
+        { "id": "menu_7", "title": { "mr": "शासनस्तरावरील योजना", "en": "Government Schemes" },       "description": { "mr": "केंद्र व राज्य योजना",      "en": "Central & state schemes" },         "next": "SCHEMES" },
+        { "id": "menu_8", "title": { "mr": "रुग्णालये व आरोग्य",  "en": "Hospitals & Health" },       "description": { "mr": "आरोग्य सेवा केंद्रे",       "en": "Health service centres" },          "next": "HOSPITALS" }
+      ]
+    },
+
+    "SCHEMES": {
+      "id": "SCHEMES",
+      "type": "interactive_list",
+      "messages": {
+        "mr": "🏛 शासनाच्या विविध योजना\n\nखालील शासकीय योजना नागरिकांसाठी उपलब्ध आहेत. कृपया योजना निवडा:",
+        "en": "🏛 Government Schemes\n\nPlease select a scheme to learn more:"
+      },
+      "list_header": { "mr": "योजना निवडा",     "en": "Select Scheme" },
+      "list_button":  { "mr": "योजना पाहा",      "en": "View Schemes" },
+      "options": [
+        { "id": "scheme_pmay",  "title": { "mr": "PM आवास योजना",       "en": "PM Awas Yojana" },        "description": { "mr": "घरकुल योजना",          "en": "Housing scheme" },         "next": "SCHEME_PMAY" },
+        { "id": "scheme_amrut", "title": { "mr": "अमृत Reform",          "en": "AMRUT Reform" },          "description": { "mr": "नागरी पायाभूत सुविधा", "en": "Urban infrastructure" },  "next": "SCHEME_AMRUT" },
+        { "id": "scheme_mv",    "title": { "mr": "माझी वसुंधरा",         "en": "Mazi Vasundhara" },       "description": { "mr": "पर्यावरण योजना",       "en": "Environment scheme" },     "next": "SCHEME_MV" },
+        { "id": "scheme_bpl",   "title": { "mr": "दारिद्र्य रेषेखालील",  "en": "Below Poverty Line" },    "description": { "mr": "BPL योजना",            "en": "BPL scheme" },             "next": "SCHEME_BPL" },
+        { "id": "scheme_sba",   "title": { "mr": "स्वच्छ भारत अभियान",  "en": "Swachh Bharat" },         "description": { "mr": "स्वच्छता योजना",       "en": "Sanitation scheme" },      "next": "SCHEME_SBA" },
+        { "id": "scheme_nulm",  "title": { "mr": "DAY-NULM",            "en": "DAY-NULM" },              "description": { "mr": "शहरी उपजीविका योजना",  "en": "Urban livelihood" },       "next": "SCHEME_NULM" }
+      ]
+    },
+
+    "SCHEME_PMAY": {
+      "id": "SCHEME_PMAY",
+      "type": "text_with_buttons",
+      "messages": {
+        "mr": "🏠 *प्रधानमंत्री आवास योजना (PMAY)*\n\nकमी उत्पन्न गटातील नागरिकांसाठी घर खरेदी किंवा बांधकामासाठी अर्थसहाय्य मिळवून देणारी केंद्र सरकारची योजना.\n\n🌐 अधिक माहितीसाठी: https://pmaymis.gov.in/",
+        "en": "🏠 *Pradhan Mantri Awas Yojana (PMAY)*\n\nCentral government scheme providing financial assistance for home purchase or construction for lower-income citizens.\n\n🌐 More info: https://pmaymis.gov.in/"
+      },
+      "options": [
+        { "id": "back_schemes", "title": { "mr": "मागे जा", "en": "Go Back" }, "next": "SCHEMES" },
+        { "id": "main_menu",    "title": { "mr": "मुख्य मेनू", "en": "Main Menu" }, "next": "MAIN_MENU" }
+      ]
+    },
+
+    "SCHEME_AMRUT": {
+      "id": "SCHEME_AMRUT",
+      "type": "text_with_buttons",
+      "messages": {
+        "mr": "🏙 *अमृत योजना (AMRUT Reform)*\n\nशहरे व नागरी भागांचा पाणीपुरवठा, ड्रेनेज, हरित क्षेत्र व इतर नागरी सुविधा सुधारण्यासाठी केंद्र सरकारची महत्त्वाकांक्षी योजना.\n\n🌐 https://amc.gov.in/mr/amrut-reforms/",
+        "en": "🏙 *AMRUT Reform*\n\nAmbitious central government scheme to improve water supply, drainage, green areas and other urban facilities.\n\n🌐 https://amc.gov.in/mr/amrut-reforms/"
+      },
+      "options": [
+        { "id": "back_schemes", "title": { "mr": "मागे जा", "en": "Go Back" }, "next": "SCHEMES" },
+        { "id": "main_menu",    "title": { "mr": "मुख्य मेनू", "en": "Main Menu" }, "next": "MAIN_MENU" }
+      ]
+    },
+
+    "SCHEME_MV": {
+      "id": "SCHEME_MV",
+      "type": "text_with_buttons",
+      "messages": {
+        "mr": "🌱 *माझी वसुंधरा योजना*\n\nपर्यावरण संरक्षण व हरित विकासासाठी राज्य सरकारची योजना.\n\n🌐 https://mazhivasundhara.in/",
+        "en": "🌱 *Mazi Vasundhara Scheme*\n\nState government scheme for environmental protection and green development.\n\n🌐 https://mazhivasundhara.in/"
+      },
+      "options": [
+        { "id": "back_schemes", "title": { "mr": "मागे जा", "en": "Go Back" }, "next": "SCHEMES" },
+        { "id": "main_menu",    "title": { "mr": "मुख्य मेनू", "en": "Main Menu" }, "next": "MAIN_MENU" }
+      ]
+    },
+
+    "SCHEME_BPL": {
+      "id": "SCHEME_BPL",
+      "type": "text_with_buttons",
+      "messages": {
+        "mr": "📋 *दारिद्र्य रेषेखालील योजना*\n\nBPL कार्डधारकांसाठी अन्न, आरोग्य व शिक्षण सुविधा.\n\n🌐 https://mahafood.gov.in/",
+        "en": "📋 *Below Poverty Line (BPL) Scheme*\n\nFood, health and education benefits for BPL cardholders.\n\n🌐 https://mahafood.gov.in/"
+      },
+      "options": [
+        { "id": "back_schemes", "title": { "mr": "मागे जा", "en": "Go Back" }, "next": "SCHEMES" },
+        { "id": "main_menu",    "title": { "mr": "मुख्य मेनू", "en": "Main Menu" }, "next": "MAIN_MENU" }
+      ]
+    },
+
+    "SCHEME_SBA": {
+      "id": "SCHEME_SBA",
+      "type": "text_with_buttons",
+      "messages": {
+        "mr": "🧹 *स्वच्छ भारत अभियान*\n_(एक पाऊल स्वच्छतेकडे)_\n\nदेशभरातील स्वच्छता सुधारण्यासाठी केंद्र सरकारचा उपक्रम — उघड्यावर शौचमुक्त भारत, कचरा व्यवस्थापन, व स्वच्छतेबाबत जनजागृती हे प्रमुख उद्दिष्ट.\n\n🌐 https://sbmurban.org",
+        "en": "🧹 *Swachh Bharat Abhiyan*\n\nCentral government initiative to improve sanitation — ODF India, waste management and sanitation awareness.\n\n🌐 https://sbmurban.org"
+      },
+      "options": [
+        { "id": "back_schemes", "title": { "mr": "मागे जा", "en": "Go Back" }, "next": "SCHEMES" },
+        { "id": "main_menu",    "title": { "mr": "मुख्य मेनू", "en": "Main Menu" }, "next": "MAIN_MENU" }
+      ]
+    },
+
+    "SCHEME_NULM": {
+      "id": "SCHEME_NULM",
+      "type": "text_with_buttons",
+      "messages": {
+        "mr": "💼 *DAY-NULM (Deendayal Antyodaya Yojana)*\n\nशहरी गरीब कुटुंबांसाठी स्वयंरोजगार व कौशल्य विकास योजना.\n\n🌐 https://nulm.gov.in/",
+        "en": "💼 *DAY-NULM*\n\nSelf-employment and skill development scheme for urban poor families.\n\n🌐 https://nulm.gov.in/"
+      },
+      "options": [
+        { "id": "back_schemes", "title": { "mr": "मागे जा", "en": "Go Back" }, "next": "SCHEMES" },
+        { "id": "main_menu",    "title": { "mr": "मुख्य मेनू", "en": "Main Menu" }, "next": "MAIN_MENU" }
+      ]
+    },
+
+    "COMPLAINT_CHANNEL": {
+      "id": "COMPLAINT_CHANNEL",
+      "type": "interactive_list",
+      "messages": {
+        "mr": "📢 तक्रार नोंदवण्यासाठी खालीलपैकी कोणताही पर्याय निवडा:",
+        "en": "📢 Select a channel to register your complaint:"
+      },
+      "list_header": { "mr": "चॅनेल निवडा",    "en": "Select Channel" },
+      "list_button":  { "mr": "चॅनेल पाहा",     "en": "View Channels" },
+      "options": [
+        { "id": "ch_website", "title": { "mr": "संकेतस्थळ",         "en": "Website" },          "description": { "mr": "ऑनलाइन पोर्टल",      "en": "Online portal" },       "next": "COMPLAINT_EXTERNAL", "meta": { "url": "https://ahilyanagar.gov.in" } },
+        { "id": "ch_app",     "title": { "mr": "मोबाईल एप",         "en": "Mobile App" },       "description": { "mr": "अँड्रॉइड / iOS एप",  "en": "Android / iOS app" },  "next": "COMPLAINT_EXTERNAL", "meta": { "url": "https://play.google.com" } },
+        { "id": "ch_wa",      "title": { "mr": "WhatsApp Chatbot",  "en": "WhatsApp Chatbot" }, "description": { "mr": "इथेच तक्रार नोंदवा", "en": "Register here now" },  "next": "COMPLAINT_WARD" },
+        { "id": "ch_pg",      "title": { "mr": "PG पोर्टल",         "en": "PG Portal" },        "description": { "mr": "pgportal.gov.in",     "en": "pgportal.gov.in" },    "next": "COMPLAINT_EXTERNAL", "meta": { "url": "https://pgportal.gov.in" } },
+        { "id": "ch_aaple",   "title": { "mr": "आपले सरकार",        "en": "Aapale Sarkar" },    "description": { "mr": "aaplesarkar.mahaonline", "en": "aaplesarkar portal" }, "next": "COMPLAINT_EXTERNAL", "meta": { "url": "https://aaplesarkar.mahaonline.gov.in" } }
+      ]
+    },
+
+    "COMPLAINT_EXTERNAL": {
+      "id": "COMPLAINT_EXTERNAL",
+      "type": "text_with_buttons",
+      "messages": {
+        "mr": "🔗 कृपया खालील लिंकवर जाऊन तक्रार नोंदवा:\n{url}\n\nतुम्हाला इतर मदत हवी असल्यास मुख्य मेनूला परत जा.",
+        "en": "🔗 Please visit the following link to register your complaint:\n{url}\n\nReturn to the main menu if you need further assistance."
+      },
+      "options": [
+        { "id": "main_menu", "title": { "mr": "मुख्य मेनू", "en": "Main Menu" }, "next": "MAIN_MENU" }
+      ]
+    },
+
+    "COMPLAINT_WARD": {
+      "id": "COMPLAINT_WARD",
+      "type": "interactive_list",
+      "messages": {
+        "mr": "🤖 तुमची तक्रार WhatsApp चॅटबॉटद्वारे नोंदवण्यासाठी आपला प्रभाग निवडा:",
+        "en": "🤖 Please select your ward committee to register a complaint via WhatsApp:"
+      },
+      "list_header": { "mr": "प्रभाग निवडा",    "en": "Select Ward" },
+      "list_button":  { "mr": "प्रभाग पाहा",     "en": "View Wards" },
+      "options": [
+        { "id": "ward_1", "title": { "mr": "प्रभाग समिती क्रमांक 1", "en": "Ward Committee 1" }, "description": { "mr": "सावेडी / नागापुर",     "en": "Savedi / Nagapur" },      "next": "COMPLAINT_TYPE" },
+        { "id": "ward_2", "title": { "mr": "प्रभाग समिती क्रमांक 2", "en": "Ward Committee 2" }, "description": { "mr": "माळीवाडा / शहर विभाग", "en": "Maliwada / City Area" },  "next": "COMPLAINT_TYPE" },
+        { "id": "ward_3", "title": { "mr": "प्रभाग समिती क्रमांक 3", "en": "Ward Committee 3" }, "description": { "mr": "झेंडिगेट / मुकुंदनगर", "en": "Zhendigate / Mukundnagar" }, "next": "COMPLAINT_TYPE" },
+        { "id": "ward_4", "title": { "mr": "प्रभाग समिती क्रमांक 4", "en": "Ward Committee 4" }, "description": { "mr": "बुरुडगाव / केडगाव",    "en": "Burudgaon / Kedgaon" },   "next": "COMPLAINT_TYPE" }
+      ]
+    },
+
+    "COMPLAINT_TYPE": {
+      "id": "COMPLAINT_TYPE",
+      "type": "interactive_list",
+      "messages": {
+        "mr": "🧾 आपण निवडले: *{ward_name}*\n\nतक्रार प्रकार निवडा:",
+        "en": "🧾 Selected: *{ward_name}*\n\nSelect complaint department:"
+      },
+      "list_header": { "mr": "विभाग निवडा",     "en": "Select Department" },
+      "list_button":  { "mr": "विभाग पाहा",      "en": "View Departments" },
+      "options": [
+        { "id": "dept_water",   "title": { "mr": "पाणीपुरवठा विभाग",    "en": "Water Supply" },        "description": { "mr": "पाणी तक्रारी",         "en": "Water complaints" },        "next": "COMPLAINT_SUBTYPE" },
+        { "id": "dept_town",    "title": { "mr": "नगररचना विभाग",       "en": "Town Planning" },       "description": { "mr": "बांधकाम परवानगी",      "en": "Building permissions" },    "next": "COMPLAINT_SUBTYPE" },
+        { "id": "dept_enc",     "title": { "mr": "अतिक्रमण विभाग",      "en": "Encroachment" },        "description": { "mr": "अनधिकृत बांधकाम",     "en": "Unauthorised structures" }, "next": "COMPLAINT_SUBTYPE" },
+        { "id": "dept_waste",   "title": { "mr": "घनकचरा विभाग",        "en": "Solid Waste" },         "description": { "mr": "कचरा व्यवस्थापन",     "en": "Garbage management" },      "next": "COMPLAINT_SUBTYPE" },
+        { "id": "dept_tax",     "title": { "mr": "घरपट्टी/पाणीपट्टी",  "en": "Property/Water Tax" },  "description": { "mr": "कर तक्रारी",           "en": "Tax complaints" },          "next": "COMPLAINT_SUBTYPE" },
+        { "id": "dept_pond",    "title": { "mr": "कोंडवाडा विभाग",      "en": "Pound (Kondhwada)" },   "description": { "mr": "जनावरे",               "en": "Stray animals" },           "next": "COMPLAINT_SUBTYPE" },
+        { "id": "dept_malaria", "title": { "mr": "मलेरिया विभाग",       "en": "Malaria Dept" },        "description": { "mr": "आरोग्य तक्रारी",      "en": "Health complaints" },       "next": "COMPLAINT_SUBTYPE" },
+        { "id": "dept_birth",   "title": { "mr": "जन्म मृत्यु विभाग",   "en": "Birth & Death" },       "description": { "mr": "प्रमाणपत्र",           "en": "Certificates" },            "next": "COMPLAINT_SUBTYPE" },
+        { "id": "dept_other",   "title": { "mr": "इतर विभाग",           "en": "Other Department" },    "description": { "mr": "अन्य तक्रारी",        "en": "Other complaints" },        "next": "COMPLAINT_FREETEXT" }
+      ]
+    },
+
+    "COMPLAINT_SUBTYPE": {
+      "id": "COMPLAINT_SUBTYPE",
+      "type": "dynamic_list",
+      "messages": {
+        "mr": "तुमची तक्रार निवडा किंवा लिहून कळवा:",
+        "en": "Select your complaint type or type it below:"
+      },
+      "subtypes": {
+        "dept_water":   [
+          { "id": "w1", "title": { "mr": "पाणी नाही",         "en": "No water supply" },       "next": "COMPLAINT_CONFIRM" },
+          { "id": "w2", "title": { "mr": "गळती",              "en": "Pipe leakage" },          "next": "COMPLAINT_CONFIRM" },
+          { "id": "w3", "title": { "mr": "दूषित पाणी",        "en": "Contaminated water" },    "next": "COMPLAINT_CONFIRM" },
+          { "id": "w_other", "title": { "mr": "इतर",          "en": "Other" },                 "next": "COMPLAINT_FREETEXT" }
+        ],
+        "dept_enc":   [
+          { "id": "e1", "title": { "mr": "अनाधिकृत होर्डिंग", "en": "Unauthorised hoarding" },"next": "COMPLAINT_CONFIRM" },
+          { "id": "e2", "title": { "mr": "धोकादायक होर्डिंग", "en": "Dangerous hoarding" },   "next": "COMPLAINT_CONFIRM" },
+          { "id": "e3", "title": { "mr": "अडथळा करणारा फलक", "en": "Obstructing signboard" }, "next": "COMPLAINT_CONFIRM" },
+          { "id": "e4", "title": { "mr": "अयोग्य होर्डिंग्स", "en": "Improper hoardings" },   "next": "COMPLAINT_CONFIRM" },
+          { "id": "e5", "title": { "mr": "होर्डिंगचे साहित्य", "en": "Dangerous hoarding material" }, "next": "COMPLAINT_CONFIRM" },
+          { "id": "e_other", "title": { "mr": "इतर",          "en": "Other" },                 "next": "COMPLAINT_FREETEXT" }
+        ],
+        "dept_waste": [
+          { "id": "g1", "title": { "mr": "कचरा उचलला नाही",  "en": "Garbage not collected" }, "next": "COMPLAINT_CONFIRM" },
+          { "id": "g2", "title": { "mr": "घंटागाडी येत नाही", "en": "Garbage van missing" },   "next": "COMPLAINT_CONFIRM" },
+          { "id": "g3", "title": { "mr": "रस्त्यावर कचरा",    "en": "Littering on road" },     "next": "COMPLAINT_CONFIRM" },
+          { "id": "g_other", "title": { "mr": "इतर",           "en": "Other" },                 "next": "COMPLAINT_FREETEXT" }
+        ],
+        "dept_town": [
+          { "id": "t1", "title": { "mr": "अनधिकृत बांधकाम",  "en": "Illegal construction" },  "next": "COMPLAINT_CONFIRM" },
+          { "id": "t2", "title": { "mr": "परवानगीशिवाय काम", "en": "Work without permit" },    "next": "COMPLAINT_CONFIRM" },
+          { "id": "t_other", "title": { "mr": "इतर",          "en": "Other" },                 "next": "COMPLAINT_FREETEXT" }
+        ],
+        "dept_default": [
+          { "id": "d_other", "title": { "mr": "तक्रार नोंदवा", "en": "Register complaint" },    "next": "COMPLAINT_FREETEXT" }
+        ]
+      },
+      "list_header": { "mr": "तक्रार निवडा",    "en": "Select Complaint" },
+      "list_button":  { "mr": "तक्रार पाहा",    "en": "View Types" }
+    },
+
+    "COMPLAINT_FREETEXT": {
+      "id": "COMPLAINT_FREETEXT",
+      "type": "free_text",
+      "messages": {
+        "mr": "✍️ कृपया तुमची तक्रार थोडक्यात लिहा (किमान 10 अक्षरे):",
+        "en": "✍️ Please describe your complaint briefly (minimum 10 characters):"
+      },
+      "next": "COMPLAINT_CONFIRM",
+      "validation": { "min_length": 10, "max_length": 500 }
+    },
+
+    "COMPLAINT_CONFIRM": {
+      "id": "COMPLAINT_CONFIRM",
+      "type": "interactive_buttons",
+      "messages": {
+        "mr": "📋 *तक्रार तपशील*\n\n🏘 प्रभाग: {ward_name}\n🏢 विभाग: {dept_name}\n📝 तक्रार: {complaint_text}\n\nही माहिती बरोबर आहे का?",
+        "en": "📋 *Complaint Summary*\n\n🏘 Ward: {ward_name}\n🏢 Dept: {dept_name}\n📝 Complaint: {complaint_text}\n\nIs this information correct?"
+      },
+      "options": [
+        { "id": "confirm_yes", "title": { "mr": "होय, सबमिट करा", "en": "Yes, Submit" }, "next": "COMPLAINT_SUCCESS" },
+        { "id": "confirm_no",  "title": { "mr": "नाही, पुन्हा करा", "en": "No, Redo" },   "next": "COMPLAINT_WARD" }
+      ]
+    },
+
+    "COMPLAINT_SUCCESS": {
+      "id": "COMPLAINT_SUCCESS",
+      "type": "text_with_buttons",
+      "messages": {
+        "mr": "✅ *आपली तक्रार नोंदवली गेली!*\n\n🎫 तक्रार क्रमांक: *{complaint_id}*\n📅 दिनांक: {date}\n\n👤 {officer_name}\n📞 {officer_phone}\n\nलवकरच निवारण करण्यात येईल. धन्यवाद! 🙏",
+        "en": "✅ *Your complaint has been registered!*\n\n🎫 Complaint ID: *{complaint_id}*\n📅 Date: {date}\n\n👤 {officer_name}\n📞 {officer_phone}\n\nYou will be contacted shortly. Thank you! 🙏"
+      },
+      "options": [
+        { "id": "main_menu", "title": { "mr": "मुख्य मेनू", "en": "Main Menu" }, "next": "MAIN_MENU" }
+      ]
+    },
+
+    "ELECTION": {
+      "id": "ELECTION",
+      "type": "text_with_buttons",
+      "messages": {
+        "mr": "🗳 *निवडणूक विभाग*\n\n• मतदार यादी: https://ceoelection.maharashtra.gov.in\n• मतदार ओळखपत्र: https://nvsp.in\n• बूथ माहिती: 1950 (टोल-फ्री)\n\nअधिक माहितीसाठी जिल्हा निवडणूक कार्यालयाशी संपर्क साधा.",
+        "en": "🗳 *Election Department*\n\n• Voter list: https://ceoelection.maharashtra.gov.in\n• Voter ID: https://nvsp.in\n• Booth info: 1950 (Toll-free)\n\nContact District Election Office for more details."
+      },
+      "options": [
+        { "id": "main_menu", "title": { "mr": "मुख्य मेनू", "en": "Main Menu" }, "next": "MAIN_MENU" }
+      ]
+    },
+
+    "EMERGENCY": {
+      "id": "EMERGENCY",
+      "type": "text_with_buttons",
+      "messages": {
+        "mr": "🚨 *आपत्कालीन सेवा*\n\n🔥 अग्निशमन: 101\n🚑 रुग्णवाहिका: 108\n👮 पोलीस: 100\n🏥 आरोग्य हेल्पलाइन: 104\n🌊 आपत्ती व्यवस्थापन: 1077\n\n📞 महानगरपालिका: 0241-XXXXXXX",
+        "en": "🚨 *Emergency Services*\n\n🔥 Fire: 101\n🚑 Ambulance: 108\n👮 Police: 100\n🏥 Health helpline: 104\n🌊 Disaster management: 1077\n\n📞 Municipality: 0241-XXXXXXX"
+      },
+      "options": [
+        { "id": "main_menu", "title": { "mr": "मुख्य मेनू", "en": "Main Menu" }, "next": "MAIN_MENU" }
+      ]
+    },
+
+    "CIVIC_SERVICES": {
+      "id": "CIVIC_SERVICES",
+      "type": "text_with_buttons",
+      "messages": {
+        "mr": "🌐 *नागरी सेवा व सुविधा*\n\n• जन्म/मृत्यू प्रमाणपत्र\n• मालमत्ता कर\n• पाणी कनेक्शन\n• बांधकाम परवानगी\n\n🌐 https://ahilyanagar.gov.in\n📞 0241-XXXXXXX",
+        "en": "🌐 *Civic Services*\n\n• Birth/Death certificates\n• Property tax\n• Water connection\n• Building permission\n\n🌐 https://ahilyanagar.gov.in\n📞 0241-XXXXXXX"
+      },
+      "options": [
+        { "id": "main_menu", "title": { "mr": "मुख्य मेनू", "en": "Main Menu" }, "next": "MAIN_MENU" }
+      ]
+    },
+
+    "DEPT_INFO": {
+      "id": "DEPT_INFO",
+      "type": "text_with_buttons",
+      "messages": {
+        "mr": "📄 *विभागांची माहिती (RTI Act 2005)*\n\nमाहितीच्या अधिकारात अर्ज करण्यासाठी:\n🌐 https://rtionline.gov.in\n\nमहानगरपालिकेचा RTI अधिकारी:\n📞 0241-XXXXXXX",
+        "en": "📄 *Department Info (RTI Act 2005)*\n\nTo file RTI application:\n🌐 https://rtionline.gov.in\n\nMunicipality RTI Officer:\n📞 0241-XXXXXXX"
+      },
+      "options": [
+        { "id": "main_menu", "title": { "mr": "मुख्य मेनू", "en": "Main Menu" }, "next": "MAIN_MENU" }
+      ]
+    },
+
+    "SOCIAL_MEDIA": {
+      "id": "SOCIAL_MEDIA",
+      "type": "text_with_buttons",
+      "messages": {
+        "mr": "📱 *अधिकृत सामाजिक माध्यमे*\n\n📘 Facebook: https://facebook.com/AhilyanaNP\n🐦 Twitter: https://twitter.com/AhilyanaNP\n📸 Instagram: https://instagram.com/AhilyanaNP\n▶️ YouTube: https://youtube.com/AhilyanaNP",
+        "en": "📱 *Official Social Media*\n\n📘 Facebook: https://facebook.com/AhilyanaNP\n🐦 Twitter: https://twitter.com/AhilyanaNP\n📸 Instagram: https://instagram.com/AhilyanaNP\n▶️ YouTube: https://youtube.com/AhilyanaNP"
+      },
+      "options": [
+        { "id": "main_menu", "title": { "mr": "मुख्य मेनू", "en": "Main Menu" }, "next": "MAIN_MENU" }
+      ]
+    },
+
+    "HOSPITALS": {
+      "id": "HOSPITALS",
+      "type": "text_with_buttons",
+      "messages": {
+        "mr": "🏥 *रुग्णालये व आरोग्य सेवा केंद्रे*\n\n🏥 जिल्हा रुग्णालय: 0241-XXXXXX\n🏥 उपजिल्हा रुग्णालय: 0241-XXXXXX\n💊 प्राथमिक आरोग्य केंद्र: 0241-XXXXXX\n🚑 रुग्णवाहिका: 108",
+        "en": "🏥 *Hospitals & Health Centres*\n\n🏥 District Hospital: 0241-XXXXXX\n🏥 Sub-district Hospital: 0241-XXXXXX\n💊 Primary Health Centre: 0241-XXXXXX\n🚑 Ambulance: 108"
+      },
+      "options": [
+        { "id": "main_menu", "title": { "mr": "मुख्य मेनू", "en": "Main Menu" }, "next": "MAIN_MENU" }
+      ]
+    },
+
+    "HUMAN_ESCALATION": {
+      "id": "HUMAN_ESCALATION",
+      "type": "text_with_buttons",
+      "messages": {
+        "mr": "👤 *मानवी सहाय्यकाशी जोडत आहोत...*\n\nकृपया थांबा. एक अधिकारी लवकरच तुमच्याशी संपर्क साधेल.\n\n📞 थेट संपर्क: 0241-XXXXXXX\n⏰ वेळ: सोम–शुक्र, सकाळी 10 ते संध्याकाळी 5",
+        "en": "👤 *Connecting to a human agent...*\n\nPlease wait. An officer will contact you shortly.\n\n📞 Direct: 0241-XXXXXXX\n⏰ Hours: Mon–Fri, 10am–5pm"
+      },
+      "options": [
+        { "id": "main_menu", "title": { "mr": "मुख्य मेनू", "en": "Main Menu" }, "next": "MAIN_MENU" }
+      ]
+    },
+
+    "FALLBACK": {
+      "id": "FALLBACK",
+      "type": "interactive_buttons",
+      "messages": {
+        "mr": "❓ माफ करा, मला हे समजले नाही.\n\nकृपया खालील पर्यायांमधून निवडा:",
+        "en": "❓ Sorry, I didn't understand that.\n\nPlease choose from the options below:"
+      },
+      "options": [
+        { "id": "retry",         "title": { "mr": "पुन्हा प्रयत्न", "en": "Try Again" },      "next": "__PREVIOUS__" },
+        { "id": "main_menu",     "title": { "mr": "मुख्य मेनू",    "en": "Main Menu" },       "next": "MAIN_MENU" },
+        { "id": "human_support", "title": { "mr": "मदत हवी",       "en": "Need Help" },        "next": "HUMAN_ESCALATION" }
+      ]
+    }
+  },
+
+  "officer_map": {
+    "ward_1": { "name": "श्री. देविदास बिज्जा", "designation": { "mr": "क्षेत्रिय अधिकारी, प्र.स.क्र. ०१", "en": "Field Officer, Ward 1" }, "phone": "8975758827" },
+    "ward_2": { "name": "श्री. राजेश पाटील",    "designation": { "mr": "क्षेत्रिय अधिकारी, प्र.स.क्र. ०२", "en": "Field Officer, Ward 2" }, "phone": "9876543210" },
+    "ward_3": { "name": "श्री. सुनील जाधव",     "designation": { "mr": "क्षेत्रिय अधिकारी, प्र.स.क्र. ०३", "en": "Field Officer, Ward 3" }, "phone": "9765432109" },
+    "ward_4": { "name": "श्री. अमोल शिंदे",     "designation": { "mr": "क्षेत्रिय अधिकारी, प्र.स.क्र. ०४", "en": "Field Officer, Ward 4" }, "phone": "9654321098" }
+  }
+}
